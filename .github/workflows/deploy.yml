@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies 🔧
+        # GitHub 服务器会自动在这里下载依赖，不会占用您的电脑
+        run: npm install --legacy-peer-deps
+
+      - name: Build H5 🏗️
+        # GitHub 服务器会自动编译网页
+        run: npm run build:h5
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # 部署编译后的 dist 文件夹
+          branch: gh-pages # 自动推送到 gh-pages 分支
