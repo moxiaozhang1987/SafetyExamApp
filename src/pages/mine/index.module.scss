@@ -1,0 +1,93 @@
+.container {
+  padding: 32rpx;
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48rpx;
+    padding: 32rpx;
+    background: #ffffff;
+    border-radius: 16rpx;
+    box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+
+    .avatar {
+      width: 120rpx;
+      height: 120rpx;
+      border-radius: 60rpx;
+      background: #165dff;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40rpx;
+      font-weight: 600;
+      margin-right: 32rpx;
+    }
+
+    .info {
+      .name {
+        font-size: 36rpx;
+        font-weight: 600;
+        color: #1d2129;
+        margin-bottom: 8rpx;
+        display: block;
+      }
+      .desc {
+        font-size: 28rpx;
+        color: #86909c;
+      }
+    }
+  }
+
+  .records {
+    .title {
+      font-size: 32rpx;
+      font-weight: 600;
+      color: #1d2129;
+      margin-bottom: 24rpx;
+      display: flex;
+      justify-content: space-between;
+
+      .clear {
+        font-size: 28rpx;
+        color: #165dff;
+        font-weight: normal;
+      }
+    }
+
+    .list {
+      .recordItem {
+        background: #fff;
+        border-radius: 16rpx;
+        padding: 32rpx;
+        margin-bottom: 24rpx;
+        box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .time {
+          font-size: 28rpx;
+          color: #4e5969;
+        }
+
+        .score {
+          font-size: 36rpx;
+          font-weight: 600;
+          color: #00b42a;
+
+          &.bad {
+            color: #f53f3f;
+          }
+        }
+      }
+    }
+
+    .empty {
+      text-align: center;
+      color: #86909c;
+      font-size: 28rpx;
+      margin-top: 64rpx;
+    }
+  }
+}
