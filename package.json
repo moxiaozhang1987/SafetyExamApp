@@ -84,6 +84,8 @@
     "tsconfig-paths-webpack-plugin": "^4.0.1",
     "postcss": "^8.4.18",
     "ts-node": "^10.9.1",
-    "@types/node": "^18.15.11"
+    "@types/node": "^18.15.11",
+    "sass": "^1.62.1",
+    "@tarojs/plugin-sass": "^3.6.2"
   }
 }
