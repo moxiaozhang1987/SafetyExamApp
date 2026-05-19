@@ -1,0 +1,108 @@
+.container {
+  padding: 32rpx;
+  
+  .header {
+    margin-bottom: 48rpx;
+    .title {
+      font-size: 40rpx;
+      font-weight: 600;
+      color: #1d2129;
+      margin-bottom: 16rpx;
+      display: block;
+    }
+    .subtitle {
+      font-size: 28rpx;
+      color: #86909c;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card {
+      width: 327rpx;
+      background: #ffffff;
+      border-radius: 16rpx;
+      padding: 32rpx;
+      box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+      margin-bottom: 32rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: all 0.2s ease;
+
+      &:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+      }
+
+      .iconBox {
+        width: 80rpx;
+        height: 80rpx;
+        border-radius: 40rpx;
+        background: rgba(22, 93, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24rpx;
+
+        .iconTxt {
+          font-size: 32rpx;
+          color: #165dff;
+          font-weight: 600;
+        }
+      }
+
+      .cardTitle {
+        font-size: 32rpx;
+        font-weight: 600;
+        color: #1d2129;
+        margin-bottom: 8rpx;
+      }
+
+      .cardDesc {
+        font-size: 24rpx;
+        color: #86909c;
+      }
+    }
+  }
+
+  .banner {
+    background: linear-gradient(135deg, #165dff 0%, #4080ff 100%);
+    border-radius: 16rpx;
+    padding: 48rpx 32rpx;
+    margin-bottom: 48rpx;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8rpx 24rpx rgba(22, 93, 255, 0.25);
+
+    .bannerTitle {
+      font-size: 36rpx;
+      font-weight: 600;
+      margin-bottom: 16rpx;
+    }
+    .bannerDesc {
+      font-size: 28rpx;
+      opacity: 0.9;
+      margin-bottom: 32rpx;
+    }
+    .btn {
+      align-self: flex-start;
+      background: #fff;
+      color: #165dff;
+      font-size: 28rpx;
+      padding: 0 48rpx;
+      height: 64rpx;
+      line-height: 64rpx;
+      border-radius: 32rpx;
+      margin: 0;
+      font-weight: 500;
+      &::after { border: none; }
+      &:active { opacity: 0.8; }
+    }
+  }
+}
